@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSs7oQal28qRyRuPsFyrbwEH7ECikUhv2JLyG1xBnovHq4ARVGhlBzXptq5npVBBw_UwE&usqp=CAU" alt="Logo" width="40" height="24" class="d-inline-block align-text-top">
+        Poke-Api
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="pokemon-card-container">
+          <div class="card">
+            <div class="card-title-container">
+              <h5 class="card-title">Player 1</h5>
+            </div>
+            <input type="text" id="pokemonName1" placeholder="Enter Pokémon name">
+            <button onclick="fetchData(1); playPokemonCry(1);">Fetch Pokémon</button>
+            <div class="progress">
+              <div id="healthBar1" class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div id="pokemon-sprite-container1" class="pokemon-sprite-container">
+              <img id="pokemonSprite1" src="..." class="card-img-top" alt="Pokémon sprite" style="display:none">
+            </div>
+            <div class="card-body">
+              <p id="pokemonMoves1" class="card-text"></p>
+              <div id="pokemon-types-container1" class="pokemon-types-container">
+                <div id="pokemon-types1"></div>
+              </div>
+              <div id="pokemon-moves-container1" class="pokemon-moves-container">
+                <h6>MOVES:</h6>
+                <ul id="pokemon-moves1"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="pokemon-card-container">
+          <div class="card">
+            <div class="card-title-container">
+              <h5 class="card-title">Player 2</h5>
+            </div>
+            <input type="text" id="pokemonName2" placeholder="Enter Pokémon name">
+            <button onclick="fetchData(2); playPokemonCry(2);">Fetch Pokémon</button>
+            <div class="progress">
+              <div id="healthBar2" class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div id="pokemon-sprite-container2" class="pokemon-sprite-container">
+              <img id="pokemonSprite2" src="..." class="card-img-top" alt="Pokémon sprite" style="display:none">
+            </div>
+            <div class="card-body">
+              <p id="pokemonMoves2" class="card-text"></p>
+              <div id="pokemon-types-container2" class="pokemon-types-container">
+                <div id="pokemon-types2"></div>
+              </div>
+              <div id="pokemon-moves-container2" class="pokemon-moves-container">
+                <h6>MOVES:</h6>
+                <ul id="pokemon-moves2"></ul>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="pokemonCry" src="" preload="auto"></audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
